@@ -1,0 +1,15 @@
+
+## To install Angular CLI
+$ npm install -g @angular/cli
+
+## To create first Angular project
+$ ng new <<app_name>>
+
+$ cd <<app_name>>
+$ npm start
+
+http://localhost:4200
+
+## To test application
+$ npm test
+
