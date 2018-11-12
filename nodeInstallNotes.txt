@@ -12,3 +12,8 @@ $ npm --version
 $ npm install --save-dev webpack@3
 
 
+npm run build
+
+npm i -g npm
+
+
