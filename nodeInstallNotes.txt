@@ -16,4 +16,9 @@ npm run build
 
 npm i -g npm
 
+## Use npm behind a proxy server
+##  Note:  username and password may not be required.  Try first without
+$ npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
+$ npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
+
 
