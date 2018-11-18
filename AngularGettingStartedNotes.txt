@@ -6,7 +6,7 @@ $ npm install -g @angular/cli
 $ ng new <<app_name>>
 
 $ cd <<app_name>>
-$ npm start
+$ ng serve
 
 http://localhost:4200
 
