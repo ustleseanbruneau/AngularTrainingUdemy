@@ -12,6 +12,26 @@ $ npm --version
 ## To install WebPack 3.0
 $ npm install --save-dev webpack@3
 
+## To install WebPack latest globally
+$ [sudo] npm install -g webpack@latest -y
+
+## To install WebPack latest in project
+$ npm install --save-dev webpack@latest
+
+## To install Bootstrap 3 globally
+$ [sudo] npm install -g bootstrap@3 -y
+
+## To install Bootstrap 3 in project
+$ npm install --save-dev bootstrap@3
+
+## To install Typescript latest globally
+$ [sudo] npm install -g typescript@latest -y
+
+## To install Angular CLI latest globally
+$ [sudo] npm install -g @angular/cli@latest -y
+
+## To install Angular CLI latest in project
+$ npm install --save-dev @angular/cli@latest
 
 npm run build
 
