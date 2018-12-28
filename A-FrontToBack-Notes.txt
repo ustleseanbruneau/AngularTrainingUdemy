@@ -119,5 +119,6 @@ Make HttpClient PUT request to the API
 
 
 
-Section 6.9 - 725
+Section 6.9 
 --------------------
+Delete Post
