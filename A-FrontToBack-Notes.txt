@@ -1,0 +1,123 @@
+Section 6 - Services
+
+Section 6.1
+--------------------
+Services introduction
+
+How?
+1. Create new file /services/my-service.service.ts
+2. import @Injectable and create class
+3. Add as a provider to @ngModule
+4. Call from component(s)
+
+ng g service services/my-service
+
+Simple example of service class
+
+import { Injectable } from '@angular/core';
+
+import { User } from './user';
+import { USERS } from './mock-users';
+
+@Injectable()
+export class UserService {
+	getUsers(): User[] {
+		return USERS;
+	}
+}
+
+
+Section 6.2
+--------------------
+Create Service
+
+$ ng g s services/data --module=app.module --spec=false
+
+added dataService to providers in app.module.ts
+
+data.service.ts
+
+import { Injectable } from '@angular/core';
+
+import { User } from '../models/User';
+
+
+Section 6.3
+--------------------
+Observables - data streams; subscribe to get updates
+
+
+*.ts
+import { Observable } from 'rxjs/Observable';
+
+	data: Observable<any>;
+	
+	getData() {
+		this.data = new Observable(observer => {
+			setTimeout(() => {
+				observer.next(1);
+			}, 1000);
+			setTimeout(() => {
+				observer.next(2);
+			}, 1000);
+			setTimeout(() => {
+				observer.next(3);
+			}, 1000);
+		})
+	}
+
+
+Section 6.4
+--------------------
+HTTPClient Setup and GET Request
+
+
+Section 6.5 
+--------------------
+How to make a POST request
+
+
+
+Section 6.6 
+--------------------
+Emit an event to add new post
+
+post-form.components.ts
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+
+posts.component.html
+<app-post-form (newPost)="onNewPost($event)"></app-post-form>
+<h2>Posts</h2>
+<div class="card" *ngFor="let post of posts">
+	<div class="card-body">
+		<h3>{{ post.title }}</h3>
+		<p>{{ post.body }}</p>
+	</div>
+</div>
+
+
+Section 6.7 
+--------------------
+edit and delete update
+
+post-component.html
+<app-post-form (newPost)="onNewPost($event)"></app-post-form>
+<h2>Posts</h2>
+<div class="card" *ngFor="let post of posts">
+	<div class="card-body">
+		<h3>{{ post.title }}</h3>
+		<p>{{ post.body }}</p>
+		<hr>
+		<button class="btn btn-danger"><i class="fa fa-remove"></i></button>
+		<button (click)="editPost(post)" class="btn btn-light"><i class="fa fa-pencil"></i></button>
+	</div>
+</div>
+
+Section 6.8 
+--------------------
+Make HttpClient PUT request to the API
+
+
+
+Section 6.9 - 725
+--------------------
